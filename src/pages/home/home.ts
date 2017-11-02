@@ -17,7 +17,8 @@ export class HomePage {
   
   urls: string[] = [
     'http://f1.media.brightcove.com/4/1852113022001/1852113022001_1964328863001_pr-001-ch-05-sl-01.mp4?pubId=1852113022001&videoId=1964302431001',
-    'http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'
+    'http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4',
+    'http://localhost:8080/var/mobile/Containers/Data/Application/FD9BDB20-E922-4F08-A943-D85400214814/Library/NoCloud/BigBuckBunny_320x180.mp4'
   ];
 
   url: string;
@@ -33,14 +34,16 @@ export class HomePage {
     public fileTransfer: FileTransfer, 
     public file: File) {
 
-      this.url = this.urls[1];
+      this.url = this.urls[2];
+      // er....this works???
+      this.src = this.url;
 
       console.log(this.url);
 
       this.platform
       .ready()
       .then(() => {
-        this.checkfileExists();
+        // this.checkfileExists();
       })
   }
 
