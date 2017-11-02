@@ -34,9 +34,9 @@ export class HomePage {
     public fileTransfer: FileTransfer, 
     public file: File) {
 
-      this.url = this.urls[2];
+      this.url = this.urls[1];
       // er....this works???
-      this.src = this.url;
+      // this.src = this.urls[2];
 
       console.log(this.url);
 
@@ -93,11 +93,11 @@ onTap($event) {
     // So this _should_ work, according to https://ionicframework.com/docs/wkwebview/. Doesn't.
     let _path =  normalizeURL(entry.toURL());
     console.log('normalised entry.toURL(): ', _path);
-    // this.src = _path; 
+     this.src = _path; 
     // --
 
     // This doesn't like to work either.
-    this.src = this.sanitizer.bypassSecurityTrustUrl(_path); 
+    // this.src = this.sanitizer.bypassSecurityTrustUrl(_path); 
 
     console.log('onComplete!', entry, this.src);  
   }
