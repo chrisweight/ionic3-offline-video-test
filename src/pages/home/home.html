@@ -8,6 +8,7 @@
 
 <ion-content no-padding>
   <video 
+    *ngIf="!!src"
     id="player"
     preload="metadata"
     controls>

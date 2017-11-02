@@ -22,7 +22,7 @@ export class HomePage {
   ];
 
   url: string;
-  src: SafeUrl; // string;
+  src: string; // SafeUrl;
   downloading: boolean = false;
   transfer: FileTransferObject;
   downloadButtonText: string = 'Download!';
@@ -43,7 +43,7 @@ export class HomePage {
       this.platform
       .ready()
       .then(() => {
-        // this.checkfileExists();
+         this.checkfileExists();
       })
   }
 
